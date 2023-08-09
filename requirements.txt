@@ -1,0 +1,6 @@
+dbt-core==1.5.0
+dbt-snowflake==1.5.0
+dbt-postgres==1.5.0
+dbt-extractor==0.4.1
+sqlfluff==2.0.7
+pandas==2.0.1
