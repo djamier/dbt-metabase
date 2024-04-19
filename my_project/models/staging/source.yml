@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: staging
+    database: postgres
+    schema: raw
+
+    tables:
+      - name: orders
+        identifier: orders
+
+      - name: order_details
+        identifier: order_details
+
+      - name: products
+        identifier: products
+
+      - name: product_categories
+        identifier: product_categories
+
+      - name: provinces
+        identifier: provinces
+
+      - name: cities
+        identifier: cities
+        
+      - name: customers
+        identifier: customers
