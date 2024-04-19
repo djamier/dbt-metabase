@@ -1,3 +1,10 @@
+{{ config(
+    materialized='table',
+    post_hook='
+        alter table {{ this }} add primary key (address_key);
+    '
+)}}
+
 select
     {{ dbt_utils.generate_surrogate_key(['a.province_id', 'city_id']) }} as address_key
     , a.province_id
