@@ -2,3 +2,5 @@
 venv
 backup
 logs
+metabase
+postgres-data
