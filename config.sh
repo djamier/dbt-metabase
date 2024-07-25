@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 if [ ! -d 'venv' ]
 then
     echo 'creating venv'
@@ -11,7 +11,7 @@ source venv/bin/activate
 echo 'update latest pip'
 pip install --upgrade pip
 
-source .env
-
 echo 'installing other packages'
 pip install -r requirements.txt
+
+source .env
