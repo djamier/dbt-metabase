@@ -1,1 +1,30 @@
-a
+second_project:
+  target: db_postgres
+  outputs:
+  
+    db_postgres:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5434
+      user: '{{ env_var(''POSTGRES_USER'') }}'
+      pass: '{{ env_var(''POSTGRES_PASSWORD'') }}'
+      dbname: postgres
+      schema: dwh
+
+    db_snowflake:
+      type: snowflake
+      account: '{{ env_var(''SNOWFLAKE_ACCOUNT_ID'') }}'
+      user: '{{ env_var(''SNOWFLAKE_USER'') }}'
+      password: '{{ env_var(''SNOWFLAKE_PASS'') }}'
+      role: '{{ env_var(''SNOWFLAKE_ROLE'') }}'
+      warehouse: '{{ env_var(''SNOWFLAKE_WAREHOUSE'') }}'
+      database: '{{ env_var(''SNOWFLAKE_DATABASE'') }}'
+      schema: '{{ env_var(''SNOWFLAKE_SCHEMA'') }}'
+      client_session_keep_alive: false
+      connect_retries: 0
+      connect_timeout: 10
+      query_tag: test
+      retry_all: false
+      retry_on_database_errors: false
+      threads: 1
