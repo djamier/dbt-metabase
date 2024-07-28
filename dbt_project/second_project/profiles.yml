@@ -9,8 +9,8 @@ second_project:
       port: 5434
       user: '{{ env_var(''POSTGRES_USER'') }}'
       pass: '{{ env_var(''POSTGRES_PASSWORD'') }}'
-      dbname: postgres
-      schema: dwh
+      dbname: dota2
+      schema: analytics
 
     db_snowflake:
       type: snowflake
