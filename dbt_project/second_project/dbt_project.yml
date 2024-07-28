@@ -19,7 +19,6 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
-# #dbt_project.yml
 # vars:
 #   surrogate_key_treat_nulls_as_empty_strings: true #turn on legacy behaviour
   
@@ -36,7 +35,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 
 models:
-  my_project:
+  second_project:
     # Config indicated by + and applies to all files under models/example/
     staging:
       +materialized: table
