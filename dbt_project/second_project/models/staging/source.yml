@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: staging
-    database: postgres
+    database: dota2
     schema: raw
 
     tables:
