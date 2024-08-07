@@ -28,6 +28,14 @@ docker-compose up -d
 ```
 This command will start dbt, metabase, also postgres database and its dependencies in separate Docker containers, and the -d flag runs the containers in detached mode, allowing you to continue using your terminal.
 
+# Start Working with DBT
+
+```bash
+cd dbt_project/second_project
+dbt deps
+touch profiles.yml
+dbt run
+```
 
 # Accessing Metabase
 
